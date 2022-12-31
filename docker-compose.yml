@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  jupyterhub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NOTEBOOKS_FROM: ./notebooks
+        HUB_PATH: /home/admin
+    ports:
+      - "80:8000"
+    volumes:
+      - storage:/home
+
+volumes:
+  storage:
