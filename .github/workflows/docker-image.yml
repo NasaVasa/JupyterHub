@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag jupyterhub:1.0
+      run: docker build . --file Dockerfile --tag nasavasa/jupyterhub:1.0
     - name: Publish the Docker image
       run: docker push nasavasa/jupyterhub:1.0
